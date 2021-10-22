@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: frontpage
+name: Forside
+propagationMethod: all
+siteSettings:
+  97f0b607-71b7-4a04-898c-29d9f1824058: # Barnehageplass
+    enabledByDefault: true
+    hasUrls: true
+    template: index
+    uriFormat: __home__
+type: single

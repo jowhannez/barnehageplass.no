@@ -1,0 +1,8 @@
+{% extends 'layout/_layout' %}
+{% block main %}
+    <article data-vue="{{ orgid }}">
+        <pre>
+            ${JSON.stringify(kindergartens, null, 2)}
+        </pre>
+    </article>
+{% endblock %}

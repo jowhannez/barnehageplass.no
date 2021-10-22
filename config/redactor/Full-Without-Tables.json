@@ -1,0 +1,18 @@
+{
+	"buttons" : [
+		"bold",
+		"italic",
+		"lists",
+		"link",
+		"file",
+		"formatting"
+	],
+	"plugins" : [
+		"table"
+	],
+	"formatting": ["p", "blockquote", "h2", "h3", "h4", "h5", "h6"],
+	"minHeight": "300px",
+	"toolbarFixed" : true,
+	"linkNewTab" : true,
+	"pasteBlockTags" : ["ul", "ol", "li", "p", "h2", "h3", "h4", "h5", "h6", "blockquote"]
+}

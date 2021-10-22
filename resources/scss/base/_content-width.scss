@@ -1,0 +1,6 @@
+.content-width {
+    width: 100%;
+    max-width: calc(1000px + $content-padding);
+    padding: $content-padding;
+    margin: 0 auto;
+}

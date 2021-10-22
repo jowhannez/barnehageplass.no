@@ -1,0 +1,40 @@
+{
+    "name": "tibe/cachebuster",
+    "description": "Handles cache busting server side",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "cachebuster"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TIBE Molde",
+            "homepage": "https://tibemolde.no"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "tibe\\cachebuster\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Cachebuster",
+        "handle": "cachebuster",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "tibe\\cachebuster\\Cachebuster"
+    }
+}

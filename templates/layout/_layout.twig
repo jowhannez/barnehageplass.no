@@ -1,0 +1,32 @@
+{% do view.registerCssFile(craft.cachebuster.get('/css/site.min.css'), {"async": "async", "defer": "defer", "media": "all"} )%}
+{% do view.registerJsFile(craft.cachebuster.get('/js/site.min.js')) %}
+
+<!doctype html>
+	<html lang="nb">
+	<head>
+		{% include "parts/_headStart" ignore missing %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		{% include "parts/_seo" %}
+	</head>
+	<body class="body">
+		<div class="body__container">
+			{% include "parts/_bodyStart" ignore missing %}
+			<header class="header">
+				{% block header %}
+					{% include "parts/_header" ignore missing %}
+				{% endblock %}
+			</header>
+			<main class="main">
+				{% block main %}{% endblock %}
+			</main>
+			<footer class="footer">
+				{% block footer %}
+					{% include "parts/_footer" ignore missing %}
+				{% endblock %}
+			</footer>
+			{% include "parts/_bodyEnd" ignore missing %}
+		</div>
+	</body>
+</html>

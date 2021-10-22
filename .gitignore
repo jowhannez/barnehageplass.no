@@ -1,0 +1,44 @@
+# BUILD FILES
+/bower_components/*
+/node_modules/*
+npm-debug.log
+/build/*
+/yarn-error.log
+
+# MISC FILES
+.history
+.DS_Store
+.vscode
+.vscode/*
+.cache
+.idea
+.project
+.settings
+*.esproj
+*.sublime-workspace
+*.sublime-project
+*.tmproj
+*.tmproject
+config.codekit3
+prepros-6.config
+
+# COMPOSER
+vendor/
+
+# Craft
+web/cpresources/
+web/assets/
+web/resources/timestamp.*
+web/resources/css/*
+web/resources/js/*
+web/resources/*.svg
+web/resources/*.png
+web/resources/*.jpg
+web/resources/*.jpeg
+
+# Scripts
+scripts/user_config.sh
+scripts/dump*/
+
+# Environment
+/.env

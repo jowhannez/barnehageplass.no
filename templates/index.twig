@@ -1,0 +1,15 @@
+{% extends 'layout/_layout' %}
+{% block main %}
+	{% if entry|default(null) %}
+		{% set handle = entry.section.handle %}
+		{% include [
+			'sections/' ~ entry.section.handle ~ '/_' ~ entry.type.handle,
+			'sections/' ~ entry.section.handle ~ '/_index'
+		] %}
+	{% elseif category|default(null) %}
+		{% include [
+			'categories/_' ~ category.group.handle,
+			'categories/_index'
+		] %}
+	{% endif %}
+{% endblock %}

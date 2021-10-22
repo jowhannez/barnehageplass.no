@@ -1,0 +1,24 @@
+{# {% if entry is defined %}
+	{% if entry.section.handle == 'homepage' %}
+		{% set title = siteInfo.websiteName|trim %}
+	{% else %}
+		{% if entry['teaser'] is defined and entry.teaser|trim|length %}
+			{% set title = entry.teaser|trim ~ ' ' ~ entry.title|trim ~ ' | ' ~ siteInfo.websiteName|trim %}
+		{% else %}
+			{% set title = entry.title|trim ~ ' | ' ~ siteInfo.websiteName|trim %}
+		{% endif %}
+		{% set url = entry.url %}
+	{% endif %}
+	{% if entry['seoDescription'] is defined and entry.seoDescription|trim|length %}
+		{% set seoDescription = entry.seoDescription|trim %}
+	{% elseif entry['ingress'] is defined and entry.ingress|trim|length %}
+		{% set seoDescription = entry.ingress|trim %}
+	{% endif %}
+	{% if entry['seoImage'] is defined and entry.seoImage|length %}
+		{% set seoImage = entry.seoImage.one.url %}
+	{% endif %}
+	{% else %}
+{% endif %} 
+{% if craft.app.config.general.devMode %}
+	{% set title = '🚧 ' ~ title %}
+{% endif %} #}

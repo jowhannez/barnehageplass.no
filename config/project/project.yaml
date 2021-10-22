@@ -1,0 +1,29 @@
+dateModified: 1634829937
+email:
+  fromEmail: jowhannez@gmail.com
+  fromName: Barnehageplass
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    8abb0b5d-7750-4ce9-b81f-f8096da2bf6e: Barnehageplass # Barnehageplass
+    97f0b607-71b7-4a04-898c-29d9f1824058: Barnehageplass # Barnehageplass
+    911821f8-04eb-41ce-9e2d-c2529ae0af48: Common # Common
+    cd0f63ae-3a08-48ea-96cf-3aea0c1cb824: Forside # Forside
+    f38fa8f4-bdf3-45f7-a737-2eda2fcb08a0: Forside # Forside
+plugins:
+  cachebuster:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: Barnehageplass
+  schemaVersion: 3.7.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

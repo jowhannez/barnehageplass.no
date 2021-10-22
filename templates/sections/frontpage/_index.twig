@@ -1,0 +1,43 @@
+<article class="entry" data-vue>
+    <section class="entry__row">
+        <div class="entry__backdrop"></div>
+        <h1 class="entry__title">Barnehageplass.no</h1>
+        <div class="entry__amount">Søk blant ${kindergartens.length} barnehager</div>
+    </section>
+    <form class="entry__search-form content-width">
+        <input class="entry__search-input" type="text" placeholder="Skriv postnummer eller sted...">
+    </form>
+    <section class="data content-width">
+        {# <p>Blå = privat</p><p>Rød = kommunal</p><p>Grønn = annet</p>
+        <div class="data__box-container">
+            <div class="data__box" :class="'data__box--' + kindergarten.eierform.toLowerCase()" v-for="kindergarten in sortedKindergartens"></div>
+        </div> #}
+        {% include "components/svg/norway.svg" %}
+        {#<script>
+            var norway = document.querySelector('.norway');
+            if (norway) {
+                var paths = norway.querySelectorAll('path');
+                for (const path of paths) {
+                    path.addEventListener('click', () => {
+                        alert(path.title);
+                    }); 
+                }
+            }
+        </script>#}
+        <ul class="data__list">
+            <li class="data__item" :class="'data__item--' + kindergarten.eierform.toLowerCase()" v-for="kindergarten in kindergartens">
+                <a :href="'/barnehage/' + kindergarten.orgnr">
+                    <h2 class="data__title">${ kindergarten.navn }</h2>
+                    <ul class="data__table">
+                        <li class="data__table-item"><b>Alder</b><div>${ kindergarten.alder }</div></li>
+                        <li class="data__table-item"><b>Antall barn</b><div>${ kindergarten.antallBarn }</div></li>
+                        <li class="data__table-item"><b>Eierform</b><div>${ kindergarten.eierform }</div></li>
+                        <li class="data__table-item"><b>Fylkesnummer</b><div>${ kindergarten.fylkesnummer }</div></li>
+                        <li class="data__table-item"><b>Kommunenumer</b><div>${ kindergarten.kommunenummer }</div></li>
+                        <li class="data__table-item"><b>Orgnr.</b><div>${ kindergarten.orgnr }</div></li>
+                    </ul>
+                </a>
+            </li> 
+        </ul>
+    </section>
+</article>
